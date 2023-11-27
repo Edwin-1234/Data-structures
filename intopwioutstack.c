@@ -56,7 +56,7 @@ void infixtopost(char e[],char p[])
                         while(optr!='(')
                         {
                                 p[j]=a[k];
-                                j++;
+                                j++;k--;
                                 optr=a[k];
                         }
                         k--;
@@ -73,7 +73,7 @@ void infixtopost(char e[],char p[])
                         a[k]=item;
                 }
                 i++;
-                p[j]='\0';
         }
+        p[j]='\0';
 }
 
