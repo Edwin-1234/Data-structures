@@ -1,4 +1,4 @@
-include<stdio.h>
+#include<stdio.h>
 #define size 10
 int dq[10],f=-1,r=-1,item;
 void insert_f(int item)
@@ -90,20 +90,35 @@ void delete_r()
 void display()
 {
     int i;
-    if(f==-1)
+    if (f == -1)
     {
         printf("DOUBLE ENDED QUEUE IS EMPTY\n");
     }
     else
     {
-        printf("Double Ended Queue Elements : ");
-        for(i=f;i<=r;i++)
+        printf("Double Ended Queue Elements: ");
+        if (f <= r)
         {
-            printf("%d ",dq[i]);
+            for (i = f; i <= r; i++)
+            {
+                printf("%d ", dq[i]);
+            }
+        }
+        else
+        {
+            for (i = f; i < size; i++)
+            {
+                printf("%d ", dq[i]);
+            }
+            for (i = 0; i <= r; i++)
+            {
+                printf("%d ", dq[i]);
+            }
         }
         printf("\n");
     }
 }
+
 
 void main()
 {
