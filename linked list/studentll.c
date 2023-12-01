@@ -127,3 +127,36 @@ void main()
         }
     }while(choice<=5);
 }
+/*void delete(int nu)
+{
+    struct node *t = h, *p = NULL;
+
+    // Check if the first node needs to be deleted
+    if (t != NULL && t->number == nu)
+    {
+        h = t->link;
+        printf("Deleted: %d\n", t->number);
+        free(t);
+        return;
+    }
+
+    // Search for the node to delete
+    while (t != NULL && t->number != nu)
+    {
+        p = t;
+        t = t->link;
+    }
+
+    // Check if the node was found
+    if (t == NULL)
+    {
+        printf("Node with number %d not found\n", nu);
+        return;
+    }
+
+    // Node found, delete it
+    p->link = t->link;
+    printf("Deleted: %d\n", t->number);
+    free(t);
+}*/
+
