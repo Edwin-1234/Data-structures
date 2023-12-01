@@ -151,3 +151,34 @@ void main()
     rhead=arrange(rhead);
     display(rhead);
 }
+/*struct node* arrange(struct node* h)
+{
+    struct node* p = h;
+
+    while (p != NULL)
+    {
+        struct node* q = p->link;
+        struct node* prev = p;
+
+        while (q != NULL)
+        {
+            if (p->exp == q->exp)
+            {
+                p->coeff = p->coeff + q->coeff;
+                prev->link = q->link;
+                free(q);
+                q = prev->link;
+            }
+            else
+            {
+                prev = q;
+                q = q->link;
+            }
+        }
+
+        p = p->link;
+    }
+
+    return h;
+}*/
+
