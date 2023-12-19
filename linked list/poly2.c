@@ -58,19 +58,22 @@ struct node*add()
     q=qh;
     while(p!=NULL && q!=NULL)
     {
-        if(p->exp==q->exp)
+        if((p->exp==q->exp)&&(p->expy==q->expy))
         {
             n=malloc(sizeof(struct node));
             n->coeff=p->coeff+q->coeff;
             n->exp=p->exp;
+            n->expy=p->expy;
             n->link=NULL;
             p=p->link;q=q->link;
         }
-        else if(p->exp>q->exp)
+        else if((p->exp> q->exp) || ((p->exp==q->exp)&&( p->expy>q->expy)))
+      
         {
             n=malloc(sizeof(struct node));
             n->coeff=p->coeff;
             n->exp=p->exp;
+            n->expy=p->expy;
             n->link=NULL;
             p=p->link;
         }
@@ -79,6 +82,7 @@ struct node*add()
             n=malloc(sizeof(struct node));
             n->coeff=q->coeff;
             n->exp=q->exp;
+            n->expy=q->expy;
             n->link=NULL;
             q=q->link;
         }
@@ -97,6 +101,7 @@ struct node*add()
     {
         n=malloc(sizeof(struct node));
         n->coeff=p->coeff;n->exp=p->exp;
+        n->expy=p->expy;
         p=p->link;
         if(rh==NULL)
         {
@@ -113,6 +118,7 @@ struct node*add()
     {
         n=malloc(sizeof(struct node));
         n->coeff=q->coeff;n->exp=q->exp;
+        n->expy=q->expy;
         q=q->link;
         if(rh==NULL)
         {
