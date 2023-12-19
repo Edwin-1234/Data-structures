@@ -27,12 +27,12 @@ int dequeue()
         else
         {
                 item=cq[f];
-                f=(f+1)%size;
                 if(f==r)
                 {
                         f=-1;
                         r=-1;
                 }
+                f=(f+1)%size;
                 return item;
         }
 }
