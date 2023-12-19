@@ -6,6 +6,7 @@ struct node
     struct node*link;
 };
 struct node* ph,*qh,*rhead;
+struct node* arrange(struct node*);
 struct node* rdpoly()
 {
     int n;
@@ -77,7 +78,7 @@ struct node*multi()
     }
     return head;
 }
-struct node *arrange(struct node *h)
+/*struct node *arrange(struct node *h)
 {
     struct node *p = h, *prev = h;
 
@@ -106,7 +107,7 @@ struct node *arrange(struct node *h)
     }
 
     return h;
-}
+}*/
 
 /*struct node*arrange(struct node*h)
 {
@@ -151,7 +152,7 @@ void main()
     rhead=arrange(rhead);
     display(rhead);
 }
-/*struct node* arrange(struct node* h)
+struct node* arrange(struct node* h)
 {
     struct node* p = h;
 
@@ -180,5 +181,5 @@ void main()
     }
 
     return h;
-}*/
+}
 
